@@ -1,6 +1,10 @@
 window.FontAwesomeKitConfig = {
-  asyncLoading: { enabled: false },
-  autoA11y: { enabled: true },
+  asyncLoading: {
+    enabled: false
+  },
+  autoA11y: {
+    enabled: true
+  },
   baseUrl: "https://ka-f.fontawesome.com",
   baseUrlKit: "https://kit-pro.fontawesome.com",
   detectConflictsUntil: null,
@@ -8,44 +12,53 @@ window.FontAwesomeKitConfig = {
   id: 73704740,
   license: "pro",
   method: "js",
-  minify: { enabled: true },
+  minify: {
+    enabled: true
+  },
   token: "219c769598",
-  v4FontFaceShim: { enabled: true },
-  v4shim: { enabled: true },
+  v4FontFaceShim: {
+    enabled: true
+  },
+  v4shim: {
+    enabled: true
+  },
   version: "5.15.4",
 };
 !(function (t) {
   "function" == typeof define && define.amd ? define("kit-loader", t) : t();
 })(function () {
   "use strict";
+
   function t(e) {
     return (t =
-      "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
-        ? function (t) {
-            return typeof t;
-          }
-        : function (t) {
-            return t &&
-              "function" == typeof Symbol &&
-              t.constructor === Symbol &&
-              t !== Symbol.prototype
-              ? "symbol"
-              : typeof t;
-          })(e);
+      "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ?
+      function (t) {
+        return typeof t;
+      } :
+      function (t) {
+        return t &&
+          "function" == typeof Symbol &&
+          t.constructor === Symbol &&
+          t !== Symbol.prototype ?
+          "symbol" :
+          typeof t;
+      })(e);
   }
+
   function e(t, e, n) {
     return (
-      e in t
-        ? Object.defineProperty(t, e, {
-            value: n,
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-          })
-        : (t[e] = n),
+      e in t ?
+      Object.defineProperty(t, e, {
+        value: n,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+      }) :
+      (t[e] = n),
       t
     );
   }
+
   function n(t, e) {
     var n = Object.keys(t);
     if (Object.getOwnPropertySymbols) {
@@ -58,21 +71,23 @@ window.FontAwesomeKitConfig = {
     }
     return n;
   }
+
   function r(t) {
     for (var r = 1; r < arguments.length; r++) {
       var o = null != arguments[r] ? arguments[r] : {};
-      r % 2
-        ? n(Object(o), !0).forEach(function (n) {
-            e(t, n, o[n]);
-          })
-        : Object.getOwnPropertyDescriptors
-        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(o))
-        : n(Object(o)).forEach(function (e) {
-            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(o, e));
-          });
+      r % 2 ?
+        n(Object(o), !0).forEach(function (n) {
+          e(t, n, o[n]);
+        }) :
+        Object.getOwnPropertyDescriptors ?
+        Object.defineProperties(t, Object.getOwnPropertyDescriptors(o)) :
+        n(Object(o)).forEach(function (e) {
+          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(o, e));
+        });
     }
     return t;
   }
+
   function o(t, e) {
     return (
       (function (t) {
@@ -87,10 +102,8 @@ window.FontAwesomeKitConfig = {
           i = void 0;
         try {
           for (
-            var c, a = t[Symbol.iterator]();
-            !(r = (c = a.next()).done) &&
-            (n.push(c.value), !e || n.length !== e);
-            r = !0
+            var c, a = t[Symbol.iterator](); !(r = (c = a.next()).done) &&
+            (n.push(c.value), !e || n.length !== e); r = !0
           );
         } catch (t) {
           (o = !0), (i = t);
@@ -122,11 +135,13 @@ window.FontAwesomeKitConfig = {
       })()
     );
   }
+
   function i(t, e) {
     (null == e || e > t.length) && (e = t.length);
     for (var n = 0, r = new Array(e); n < e; n++) r[n] = t[n];
     return r;
   }
+
   function c(t, e) {
     var n = (e && e.addOn) || "",
       r = (e && e.baseFilename) || t.license + n,
@@ -146,9 +161,11 @@ window.FontAwesomeKitConfig = {
       i
     );
   }
+
   function a(t) {
     return t.baseUrlKit + "/" + t.token + "/" + t.id + "/kit-upload.css";
   }
+
   function u(t, e) {
     var n = e || ["fa"],
       r = "." + Array.prototype.join.call(n, ",."),
@@ -156,13 +173,12 @@ window.FontAwesomeKitConfig = {
     Array.prototype.forEach.call(o, function (e) {
       var n = e.getAttribute("title");
       e.setAttribute("aria-hidden", "true");
-      var r =
-        !e.nextElementSibling ||
+      var r = !e.nextElementSibling ||
         !e.nextElementSibling.classList.contains("sr-only");
       if (n && r) {
         var o = t.createElement("span");
         (o.innerHTML = n),
-          o.classList.add("sr-only"),
+        o.classList.add("sr-only"),
           e.parentNode.insertBefore(o, e.nextSibling);
       }
     });
@@ -170,18 +186,21 @@ window.FontAwesomeKitConfig = {
   var f,
     s = function () {},
     d =
-      "undefined" != typeof global &&
-      void 0 !== global.process &&
-      "function" == typeof global.process.emit,
+    "undefined" != typeof global &&
+    void 0 !== global.process &&
+    "function" == typeof global.process.emit,
     l = "undefined" == typeof setImmediate ? setTimeout : setImmediate,
     h = [];
+
   function m() {
     for (var t = 0; t < h.length; t++) h[t][0](h[t][1]);
     (h = []), (f = !1);
   }
+
   function p(t, e) {
     h.push([t, e]), f || ((f = !0), l(m, 0));
   }
+
   function y(t) {
     var e = t.owner,
       n = e._state,
@@ -198,6 +217,7 @@ window.FontAwesomeKitConfig = {
     }
     b(i, r) || ("fulfilled" === n && v(i, r), "rejected" === n && w(i, r));
   }
+
   function b(e, n) {
     var r;
     try {
@@ -226,29 +246,37 @@ window.FontAwesomeKitConfig = {
     }
     return !1;
   }
+
   function v(t, e) {
     (t !== e && b(t, e)) || g(t, e);
   }
+
   function g(t, e) {
     "pending" === t._state && ((t._state = "settled"), (t._data = e), p(S, t));
   }
+
   function w(t, e) {
     "pending" === t._state && ((t._state = "settled"), (t._data = e), p(O, t));
   }
+
   function A(t) {
     t._then = t._then.forEach(y);
   }
+
   function S(t) {
     (t._state = "fulfilled"), A(t);
   }
+
   function O(t) {
     (t._state = "rejected"),
-      A(t),
+    A(t),
       !t._handled && d && global.process.emit("unhandledRejection", t._data, t);
   }
+
   function j(t) {
     global.process.emit("rejectionHandled", t);
   }
+
   function E(t) {
     if ("function" != typeof t)
       throw new TypeError("Promise resolver " + t + " is not a function");
@@ -257,18 +285,18 @@ window.FontAwesomeKitConfig = {
         "Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function."
       );
     (this._then = []),
-      (function (t, e) {
-        function n(t) {
-          w(e, t);
-        }
-        try {
-          t(function (t) {
-            v(e, t);
-          }, n);
-        } catch (t) {
-          n(t);
-        }
-      })(t, this);
+    (function (t, e) {
+      function n(t) {
+        w(e, t);
+      }
+      try {
+        t(function (t) {
+          v(e, t);
+        }, n);
+      } catch (t) {
+        n(t);
+      }
+    })(t, this);
   }
   (E.prototype = {
     constructor: E,
@@ -285,11 +313,11 @@ window.FontAwesomeKitConfig = {
       };
       return (
         (!e && !t) ||
-          this._handled ||
-          ((this._handled = !0), "rejected" === this._state && d && p(j, this)),
-        "fulfilled" === this._state || "rejected" === this._state
-          ? p(y, n)
-          : this._then.push(n),
+        this._handled ||
+        ((this._handled = !0), "rejected" === this._state && d && p(j, this)),
+        "fulfilled" === this._state || "rejected" === this._state ?
+        p(y, n) :
+        this._then.push(n),
         n.then
       );
     },
@@ -297,79 +325,84 @@ window.FontAwesomeKitConfig = {
       return this.then(null, t);
     },
   }),
-    (E.all = function (t) {
-      if (!Array.isArray(t))
-        throw new TypeError("You must pass an array to Promise.all().");
-      return new E(function (e, n) {
-        var r = [],
-          o = 0;
-        function i(t) {
-          return (
-            o++,
-            function (n) {
-              (r[t] = n), --o || e(r);
-            }
-          );
-        }
-        for (var c, a = 0; a < t.length; a++)
-          (c = t[a]) && "function" == typeof c.then
-            ? c.then(i(a), n)
-            : (r[a] = c);
-        o || e(r);
-      });
-    }),
-    (E.race = function (t) {
-      if (!Array.isArray(t))
-        throw new TypeError("You must pass an array to Promise.race().");
-      return new E(function (e, n) {
-        for (var r, o = 0; o < t.length; o++)
-          (r = t[o]) && "function" == typeof r.then ? r.then(e, n) : e(r);
-      });
-    }),
-    (E.resolve = function (e) {
-      return e && "object" === t(e) && e.constructor === E
-        ? e
-        : new E(function (t) {
-            t(e);
-          });
-    }),
-    (E.reject = function (t) {
-      return new E(function (e, n) {
-        n(t);
-      });
+  (E.all = function (t) {
+    if (!Array.isArray(t))
+      throw new TypeError("You must pass an array to Promise.all().");
+    return new E(function (e, n) {
+      var r = [],
+        o = 0;
+
+      function i(t) {
+        return (
+          o++,
+          function (n) {
+            (r[t] = n), --o || e(r);
+          }
+        );
+      }
+      for (var c, a = 0; a < t.length; a++)
+        (c = t[a]) && "function" == typeof c.then ?
+        c.then(i(a), n) :
+        (r[a] = c);
+      o || e(r);
     });
+  }),
+  (E.race = function (t) {
+    if (!Array.isArray(t))
+      throw new TypeError("You must pass an array to Promise.race().");
+    return new E(function (e, n) {
+      for (var r, o = 0; o < t.length; o++)
+        (r = t[o]) && "function" == typeof r.then ? r.then(e, n) : e(r);
+    });
+  }),
+  (E.resolve = function (e) {
+    return e && "object" === t(e) && e.constructor === E ?
+      e :
+      new E(function (t) {
+        t(e);
+      });
+  }),
+  (E.reject = function (t) {
+    return new E(function (e, n) {
+      n(t);
+    });
+  });
   var _ = "function" == typeof Promise ? Promise : E;
+
   function P(t, e) {
     var n = e.fetch,
       r = e.XMLHttpRequest,
       o = e.token,
       i = t;
     return (
-      "URLSearchParams" in window
-        ? (i = new URL(t)).searchParams.set("token", o)
-        : (i = i + "?token=" + encodeURIComponent(o)),
+      "URLSearchParams" in window ?
+      (i = new URL(t)).searchParams.set("token", o) :
+      (i = i + "?token=" + encodeURIComponent(o)),
       (i = i.toString()),
       new _(function (t, e) {
         if ("function" == typeof n)
-          n(i, { mode: "cors", cache: "default" })
-            .then(function (t) {
-              if (t.ok) return t.text();
-              throw new Error("");
-            })
-            .then(function (e) {
-              t(e);
-            })
-            .catch(e);
+          n(i, {
+            mode: "cors",
+            cache: "default"
+          })
+          .then(function (t) {
+            if (t.ok) return t.text();
+            throw new Error("");
+          })
+          .then(function (e) {
+            t(e);
+          })
+          .catch(e);
         else if ("function" == typeof r) {
           var o = new r();
           o.addEventListener("loadend", function () {
             this.responseText ? t(this.responseText) : e(new Error(""));
           });
           ["abort", "error", "timeout"].map(function (t) {
-            o.addEventListener(t, function () {
-              e(new Error(""));
-            });
-          }),
+              o.addEventListener(t, function () {
+                e(new Error(""));
+              });
+            }),
             o.open("GET", i),
             o.send();
         } else {
@@ -378,6 +411,7 @@ window.FontAwesomeKitConfig = {
       })
     );
   }
+
   function C(t, e, n) {
     var r = t;
     return (
@@ -409,36 +443,50 @@ window.FontAwesomeKitConfig = {
       r
     );
   }
+
   function F(t, e) {
     var n =
-        arguments.length > 2 && void 0 !== arguments[2]
-          ? arguments[2]
-          : function () {},
+      arguments.length > 2 && void 0 !== arguments[2] ?
+      arguments[2] :
+      function () {},
       o = e.document || o,
       i = u.bind(u, o, ["fa", "fab", "fas", "far", "fal", "fad", "fak"]),
       f = Object.keys(t.iconUploads || {}).length > 0;
     t.autoA11y.enabled && n(i);
-    var s = [{ id: "fa-main", addOn: void 0 }];
-    t.v4shim.enabled && s.push({ id: "fa-v4-shims", addOn: "-v4-shims" }),
+    var s = [{
+      id: "fa-main",
+      addOn: void 0
+    }];
+    t.v4shim.enabled && s.push({
+        id: "fa-v4-shims",
+        addOn: "-v4-shims"
+      }),
       t.v4FontFaceShim.enabled &&
-        s.push({ id: "fa-v4-font-face", addOn: "-v4-font-face" }),
-      f && s.push({ id: "fa-kit-upload", customCss: !0 });
+      s.push({
+        id: "fa-v4-font-face",
+        addOn: "-v4-font-face"
+      }),
+      f && s.push({
+        id: "fa-kit-upload",
+        customCss: !0
+      });
     var d = s.map(function (n) {
       return new _(function (o, i) {
         P(
-          n.customCss
-            ? a(t)
-            : c(t, { addOn: n.addOn, minify: t.minify.enabled }),
-          e
-        )
+            n.customCss ?
+            a(t) :
+            c(t, {
+              addOn: n.addOn,
+              minify: t.minify.enabled
+            }),
+            e
+          )
           .then(function (i) {
             o(
               U(
                 i,
                 r(
-                  r({}, e),
-                  {},
-                  {
+                  r({}, e), {}, {
                     baseUrl: t.baseUrl,
                     version: t.version,
                     id: n.id,
@@ -455,12 +503,13 @@ window.FontAwesomeKitConfig = {
     });
     return _.all(d);
   }
+
   function U(t, e) {
     var n =
-        e.contentFilter ||
-        function (t, e) {
-          return t;
-        },
+      e.contentFilter ||
+      function (t, e) {
+        return t;
+      },
       r = document.createElement("style"),
       o = document.createTextNode(n(t, e));
     return (
@@ -468,16 +517,17 @@ window.FontAwesomeKitConfig = {
       (r.media = "all"),
       e.id && r.setAttribute("id", e.id),
       e &&
-        e.detectingConflicts &&
-        e.detectionIgnoreAttr &&
-        r.setAttributeNode(document.createAttribute(e.detectionIgnoreAttr)),
+      e.detectingConflicts &&
+      e.detectionIgnoreAttr &&
+      r.setAttributeNode(document.createAttribute(e.detectionIgnoreAttr)),
       r
     );
   }
+
   function k(t, e) {
     (e.autoA11y = t.autoA11y.enabled),
-      "pro" === t.license &&
-        ((e.autoFetchSvg = !0),
+    "pro" === t.license &&
+      ((e.autoFetchSvg = !0),
         (e.fetchSvgFrom =
           t.baseUrl +
           "/releases/" +
@@ -487,36 +537,45 @@ window.FontAwesomeKitConfig = {
     var n = [];
     return (
       t.v4shim.enabled &&
-        n.push(
-          new _(function (n, o) {
-            P(c(t, { addOn: "-v4-shims", minify: t.minify.enabled }), e)
-              .then(function (t) {
-                n(I(t, r(r({}, e), {}, { id: "fa-v4-shims" })));
-              })
-              .catch(o);
-          })
-        ),
       n.push(
         new _(function (n, o) {
-          P(c(t, { minify: t.minify.enabled }), e)
+          P(c(t, {
+              addOn: "-v4-shims",
+              minify: t.minify.enabled
+            }), e)
             .then(function (t) {
-              var o = I(t, r(r({}, e), {}, { id: "fa-main" }));
+              n(I(t, r(r({}, e), {}, {
+                id: "fa-v4-shims"
+              })));
+            })
+            .catch(o);
+        })
+      ),
+      n.push(
+        new _(function (n, o) {
+          P(c(t, {
+              minify: t.minify.enabled
+            }), e)
+            .then(function (t) {
+              var o = I(t, r(r({}, e), {}, {
+                id: "fa-main"
+              }));
               n(
                 (function (t, e) {
                   var n =
-                      e && void 0 !== e.autoFetchSvg ? e.autoFetchSvg : void 0,
+                    e && void 0 !== e.autoFetchSvg ? e.autoFetchSvg : void 0,
                     r = e && void 0 !== e.autoA11y ? e.autoA11y : void 0;
                   void 0 !== r &&
                     t.setAttribute("data-auto-a11y", r ? "true" : "false");
                   n &&
                     (t.setAttributeNode(
-                      document.createAttribute("data-auto-fetch-svg")
-                    ),
-                    t.setAttribute("data-fetch-svg-from", e.fetchSvgFrom),
-                    t.setAttribute(
-                      "data-fetch-uploaded-svg-from",
-                      e.fetchUploadedSvgFrom
-                    ));
+                        document.createAttribute("data-auto-fetch-svg")
+                      ),
+                      t.setAttribute("data-fetch-svg-from", e.fetchSvgFrom),
+                      t.setAttribute(
+                        "data-fetch-uploaded-svg-from",
+                        e.fetchUploadedSvgFrom
+                      ));
                   return t;
                 })(o, e)
               );
@@ -527,6 +586,7 @@ window.FontAwesomeKitConfig = {
       _.all(n)
     );
   }
+
   function I(t, e) {
     var n = document.createElement("SCRIPT"),
       r = document.createTextNode(t);
@@ -535,12 +595,13 @@ window.FontAwesomeKitConfig = {
       (n.referrerPolicy = "strict-origin"),
       e.id && n.setAttribute("id", e.id),
       e &&
-        e.detectingConflicts &&
-        e.detectionIgnoreAttr &&
-        n.setAttributeNode(document.createAttribute(e.detectionIgnoreAttr)),
+      e.detectingConflicts &&
+      e.detectionIgnoreAttr &&
+      n.setAttributeNode(document.createAttribute(e.detectionIgnoreAttr)),
       n
     );
   }
+
   function L(t) {
     var e,
       n = [],
@@ -561,16 +622,19 @@ window.FontAwesomeKitConfig = {
       ),
       i ? setTimeout(t, 0) : n.push(t);
   }
+
   function T(t) {
     "undefined" != typeof MutationObserver &&
-      new MutationObserver(t).observe(document, { childList: !0, subtree: !0 });
+      new MutationObserver(t).observe(document, {
+        childList: !0,
+        subtree: !0
+      });
   }
   try {
     if (window.FontAwesomeKitConfig) {
       var x = window.FontAwesomeKitConfig,
         M = {
-          detectingConflicts:
-            x.detectConflictsUntil &&
+          detectingConflicts: x.detectConflictsUntil &&
             new Date() <= new Date(x.detectConflictsUntil),
           detectionIgnoreAttr: "data-fa-detection-ignore",
           fetch: window.fetch,
@@ -582,50 +646,50 @@ window.FontAwesomeKitConfig = {
         N = D ? D.parentElement : document.head;
       (function () {
         var t =
-            arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
           e =
-            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return "js" === t.method
-          ? k(t, e)
-          : "css" === t.method
-          ? F(t, e, function (t) {
-              L(t), T(t);
-            })
-          : void 0;
+          arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return "js" === t.method ?
+          k(t, e) :
+          "css" === t.method ?
+          F(t, e, function (t) {
+            L(t), T(t);
+          }) :
+          void 0;
       })(x, M)
-        .then(function (t) {
+      .then(function (t) {
           t.map(function (t) {
-            try {
-              N.insertBefore(t, D ? D.nextSibling : null);
-            } catch (e) {
-              N.appendChild(t);
-            }
-          }),
+              try {
+                N.insertBefore(t, D ? D.nextSibling : null);
+              } catch (e) {
+                N.appendChild(t);
+              }
+            }),
             M.detectingConflicts &&
-              D &&
-              L(function () {
-                D.setAttributeNode(
-                  document.createAttribute(M.detectionIgnoreAttr)
+            D &&
+            L(function () {
+              D.setAttributeNode(
+                document.createAttribute(M.detectionIgnoreAttr)
+              );
+              var t = (function (t, e) {
+                var n = document.createElement("script");
+                return (
+                  e &&
+                  e.detectionIgnoreAttr &&
+                  n.setAttributeNode(
+                    document.createAttribute(e.detectionIgnoreAttr)
+                  ),
+                  (n.src = c(t, {
+                    baseFilename: "conflict-detection",
+                    fileSuffix: "js",
+                    subdir: "js",
+                    minify: t.minify.enabled,
+                  })),
+                  n
                 );
-                var t = (function (t, e) {
-                  var n = document.createElement("script");
-                  return (
-                    e &&
-                      e.detectionIgnoreAttr &&
-                      n.setAttributeNode(
-                        document.createAttribute(e.detectionIgnoreAttr)
-                      ),
-                    (n.src = c(t, {
-                      baseFilename: "conflict-detection",
-                      fileSuffix: "js",
-                      subdir: "js",
-                      minify: t.minify.enabled,
-                    })),
-                    n
-                  );
-                })(x, M);
-                document.body.appendChild(t);
-              });
+              })(x, M);
+              document.body.appendChild(t);
+            });
         })
         .catch(function (t) {
           console.error("".concat("Font Awesome Kit:", " ").concat(t));
