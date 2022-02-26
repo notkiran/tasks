@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <form>
+        <h3 class="Subscription">Subscription Form for Mag-o-Zine</h3>
+        <fieldset class="subdetails">
+          <legend class="leg">Yes! I want to subscribe to Mag-O-Zine</legend>
+
+          <label class="label" for="fname"> First Name:</label><br />
+          <input
+            class="fname"
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="First Name"
+          /><br />
+
+          <label class="label" for="lname"> Last Name:</label><br />
+          <input
+            class="text"
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="Last Name"
+            required
+          /><br />
+          <label class="label" for="mnumber"> Mobile Number:</label><br />
+          <input
+            class="number"
+            type="number"
+            id="mNumber"
+            name="mNumber"
+            placeholder="Mobile Number"
+            required
+          /><br />
+          <label class="label" for="email"> Email:</label>
+          <input
+            class="email"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <label class="label" for="Salaried"> Salaried:</label>
+          <input type="radio" id="Salaried" name="participant" />
+          <label class="label" for="own-business"> Own business:</label>
+          <input type="radio" id="own-business" name="participant" /><br />
+
+          <button class="button" type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
